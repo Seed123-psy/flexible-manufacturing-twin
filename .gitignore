@@ -6,3 +6,4 @@ deliverables/
 .tmp-chrome-ui/
 /coconut-durian.glb
 .git-push/
+docs/chrome-*/
