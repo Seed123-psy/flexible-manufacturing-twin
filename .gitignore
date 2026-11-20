@@ -4,5 +4,5 @@ dist/
 *.local
 deliverables/
 .tmp-chrome-ui/
-coconut-durian.glb
+/coconut-durian.glb
 .git-push/
