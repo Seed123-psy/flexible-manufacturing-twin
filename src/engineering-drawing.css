@@ -1,0 +1,150 @@
+/* The drawing uses the entire app viewport, independent of the projected monitor. */
+.control-screen-layer.is-compact.is-drawing-view { inset: 0; padding: 0; }
+.control-screen-layer.is-drawing-view > .control-screen {
+  grid-template-rows: minmax(0, 1fr);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: #efede1;
+}
+.is-drawing-view .control-screen :is(.console-header, .console-tabs, .console-footer),
+.factory-shell #viewport.is-control-room:has(.is-drawing-view) .factory-leave { display: none; }
+.is-drawing-view .control-screen .console-pages { overflow: hidden; }
+.is-drawing-view .control-screen .console-page.console-routes {
+  grid-template: minmax(0, 1fr) / minmax(0, 1fr);
+  align-content: stretch;
+  height: 100%;
+  padding: 0;
+  gap: 0;
+}
+
+.drawing-panel,
+.drawing-panel .route-map-body.drawing-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+.drawing-panel .route-map-body.drawing-body { display: block; padding: 0; }
+.drawing-panel .drawing-stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+.drawing-panel .drawing-stage:focus-visible { outline-offset: -2px; }
+.drawing-panel .drawing-stage.is-panning { cursor: grabbing; }
+.drawing-panel .drawing-stage > canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  border: 0;
+  border-radius: 0;
+}
+.drawing-panel .drawing-stage > .drawing-live-canvas { pointer-events: none; }
+
+.drawing-overlay {
+  position: absolute;
+  z-index: 1;
+  top: max(10px, env(safe-area-inset-top));
+  right: max(10px, env(safe-area-inset-right));
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid #7d8c8170;
+  border-radius: 8px;
+  background: #faf8ef;
+  color: #254743;
+  box-shadow: 0 2px 8px #2939291c;
+}
+.drawing-overlay .drawing-icon.button {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.drawing-overlay .drawing-icon.button:hover,
+.drawing-tools[open] > .drawing-icon { background: #dce7db; }
+.drawing-overlay .drawing-icon:focus-visible { outline: 2px solid #44706c; }
+.drawing-tools > summary::-webkit-details-marker { display: none; }
+.drawing-tool-panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  box-sizing: border-box;
+  width: min(340px, calc(100vw - 24px));
+  max-height: calc(100dvh - 72px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  overflow: auto;
+  overscroll-behavior: contain;
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #46646a;
+  border-radius: 8px;
+  background: #11272b;
+  color: #d9e8e5;
+  box-shadow: 0 8px 24px #10222338;
+}
+.drawing-tool-panel :is(.drawing-views, .drawing-layers, .scene-views) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.drawing-tool-panel :is(.drawing-views, .scene-views) .button,
+.drawing-tool-panel .scene-view {
+  min-height: 30px;
+  padding: 0 8px;
+  border: 1px solid #3b5d62;
+  border-radius: 4px;
+  background: #172d32;
+  color: #d8ece8;
+  font-size: 12px;
+}
+.drawing-tool-panel .button[aria-pressed="true"] { background: #dce9d9; color: #214a45; }
+.drawing-tool-panel .button:hover:not([aria-pressed="true"], :disabled) { background: #25464c; }
+.drawing-layers { padding-block: 6px; border-block: 1px solid #3b5d62; }
+.drawing-layer-heading { flex-basis: 100%; color: #aac4c2; font-size: 11px; }
+.drawing-layers label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 27px;
+  padding-inline: 3px;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 12px;
+}
+.drawing-layers label:hover { background: #234247; }
+.drawing-layers label i { width: 6px; height: 6px; border-radius: 50%; background: var(--route-color); }
+.drawing-layers input { margin: 0; accent-color: #83c7ad; }
+.drawing-layer-menu { flex-basis: 100%; }
+.drawing-tool-panel summary { padding: 4px; cursor: pointer; font-size: 12px; }
+.drawing-tool-panel summary:hover { background: #234247; }
+.drawing-layer-list { display: flex; flex-wrap: wrap; gap: 4px; }
+.drawing-tool-panel .route-map-note { color: #acc4c3; font-size: 11px; }
+.drawing-camera-tools > :not(summary) { margin-top: 6px; }
+.drawing-camera-tools :is(.drawing-monitor, .scene-heading) { display: flex; align-items: center; gap: 7px; }
+.drawing-camera-tools .scene-heading, .drawing-camera-tools .scene-views {
+  position: static;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+.drawing-camera-tools .drawing-monitor > span { font-size: 12px; }
+.drawing-camera-tools #drawing-clock { color: #b8f5db; font-variant-numeric: tabular-nums; }
+.drawing-camera-tools #camera-view { font-size: 13px; }
