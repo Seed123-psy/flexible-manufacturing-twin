@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 760" role="img" aria-labelledby="title desc">
+  <title id="title">F01 柔性制造车间数字孪生流程</title>
+  <desc id="desc">从设计、打印、质检、包装、仓储到发运的柔性制造流程图</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#102930"/>
+      <stop offset="1" stop-color="#061217"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#173b42" stop-opacity=".96"/>
+      <stop offset="1" stop-color="#0b2027" stop-opacity=".96"/>
+    </linearGradient>
+    <linearGradient id="mint" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#91f1cb"/>
+      <stop offset="1" stop-color="#5fd4c1"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#91f1cb" stroke-opacity=".08"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#91f1cb"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="760" rx="34" fill="url(#bg)"/>
+  <rect x="24" y="24" width="1552" height="712" rx="24" fill="url(#grid)" stroke="#6caca5" stroke-opacity=".38"/>
+  <g font-family="Arial,'Microsoft YaHei',sans-serif">
+    <rect x="72" y="66" width="14" height="14" rx="3" fill="#91f1cb"/>
+    <text x="108" y="80" fill="#effaf4" font-size="23" font-weight="700" letter-spacing="3">F01 / DIGITAL TWIN WORKSHOP</text>
+    <text x="1528" y="80" fill="#a4c2c5" font-size="18" text-anchor="end" letter-spacing="2">DESIGN / MAKE / SHIP</text>
+    <text x="72" y="160" fill="#effaf4" font-size="58" font-weight="800">柔性制造车间</text>
+    <text x="76" y="208" fill="#91f1cb" font-size="30" font-weight="700" letter-spacing="2">从一份设计，到一次完整交付</text>
+    <text x="78" y="250" fill="#a4c2c5" font-size="20">设备状态 · 物流路径 · 订单进度 · 工程校核</text>
+    <g transform="translate(72 314)">
+      <rect width="1456" height="298" rx="20" fill="#081a20" fill-opacity=".68" stroke="#6caca5" stroke-opacity=".48"/>
+      <path d="M112 140H1348" stroke="#91f1cb" stroke-opacity=".18" stroke-width="2" stroke-dasharray="8 12"/>
+      <path d="M222 140H395M500 140H673M778 140H951M1056 140H1229" stroke="#91f1cb" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)" filter="url(#glow)"/>
+      <g>
+        <rect x="54" y="48" width="178" height="184" rx="16" fill="url(#panel)" stroke="#91f1cb" stroke-opacity=".72"/>
+        <circle cx="91" cy="88" r="11" fill="#91f1cb"/>
+        <text x="116" y="96" fill="#91f1cb" font-size="18" font-weight="700">01 / DESIGN</text>
+        <text x="76" y="144" fill="#effaf4" font-size="26" font-weight="700">设计校核</text>
+        <text x="76" y="178" fill="#a4c2c5" font-size="17">模型 · 尺寸 · 动线</text>
+        <text x="76" y="207" fill="#a4c2c5" font-size="17">工程图同图复核</text>
+      </g>
+      <g>
+        <rect x="342" y="48" width="178" height="184" rx="16" fill="url(#panel)" stroke="#91f1cb" stroke-opacity=".72"/>
+        <circle cx="379" cy="88" r="11" fill="#91f1cb"/>
+        <text x="404" y="96" fill="#91f1cb" font-size="18" font-weight="700">02 / PRINT</text>
+        <text x="364" y="144" fill="#effaf4" font-size="26" font-weight="700">首件打印</text>
+        <text x="364" y="178" fill="#a4c2c5" font-size="17">逐层打印 · 冷却</text>
+        <text x="364" y="207" fill="#a4c2c5" font-size="17">首件合格再批产</text>
+      </g>
+      <g>
+        <rect x="630" y="48" width="178" height="184" rx="16" fill="url(#panel)" stroke="#91f1cb" stroke-opacity=".72"/>
+        <circle cx="667" cy="88" r="11" fill="#91f1cb"/>
+        <text x="692" y="96" fill="#91f1cb" font-size="18" font-weight="700">03 / PACK</text>
+        <text x="652" y="144" fill="#effaf4" font-size="26" font-weight="700">自动装盒</text>
+        <text x="652" y="178" fill="#a4c2c5" font-size="17">补料 · 抓取 · 封贴</text>
+        <text x="652" y="207" fill="#a4c2c5" font-size="17">标签与箱件复核</text>
+      </g>
+      <g>
+        <rect x="918" y="48" width="178" height="184" rx="16" fill="url(#panel)" stroke="#91f1cb" stroke-opacity=".72"/>
+        <circle cx="955" cy="88" r="11" fill="#91f1cb"/>
+        <text x="980" y="96" fill="#91f1cb" font-size="18" font-weight="700">04 / STORE</text>
+        <text x="940" y="144" fill="#effaf4" font-size="26" font-weight="700">智能仓储</text>
+        <text x="940" y="178" fill="#a4c2c5" font-size="17">扫码 · 分流 · 上架</text>
+        <text x="940" y="207" fill="#a4c2c5" font-size="17">入库与出库并行</text>
+      </g>
+      <g>
+        <rect x="1206" y="48" width="178" height="184" rx="16" fill="url(#panel)" stroke="#ffc88d" stroke-opacity=".8"/>
+        <circle cx="1243" cy="88" r="11" fill="#ffc88d"/>
+        <text x="1268" y="96" fill="#ffc88d" font-size="18" font-weight="700">05 / DISPATCH</text>
+        <text x="1228" y="144" fill="#effaf4" font-size="26" font-weight="700">交付复盘</text>
+        <text x="1228" y="178" fill="#a4c2c5" font-size="17">拣货 · 装车 · 发运</text>
+        <text x="1228" y="207" fill="#a4c2c5" font-size="17">异常数据回写设计</text>
+      </g>
+    </g>
+    <g transform="translate(72 660)">
+      <text x="0" y="0" fill="#a4c2c5" font-size="18">仿真订单</text>
+      <text x="110" y="0" fill="#91f1cb" font-size="24" font-weight="700">2,000 件</text>
+      <text x="345" y="0" fill="#a4c2c5" font-size="18">成品发运</text>
+      <text x="465" y="0" fill="#91f1cb" font-size="24" font-weight="700">1,900 件</text>
+      <text x="700" y="0" fill="#a4c2c5" font-size="18">异常清运</text>
+      <text x="810" y="0" fill="#ffc88d" font-size="24" font-weight="700">100 件</text>
+      <text x="1528" y="0" fill="#6caca5" font-size="18" text-anchor="end" letter-spacing="2">F01 / CLOSED LOOP</text>
+    </g>
+  </g>
+</svg>
