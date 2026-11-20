@@ -5,14 +5,10 @@
 ## 项目概览
 
 <p align="center">
-  <img src="docs/factory-flow.svg" alt="F01 柔性制造车间数字孪生流程" width="100%" />
+  <img src="docs/factory-runtime.png" alt="F01 柔性定制制造车间启动后的 3D 厂区页面" width="100%" />
 </p>
 
-主控台把订单、设备、仓储、异常和工程复盘放在同一套数字孪生流程里。
-
-<p align="center">
-  <img src="docs/control-room.svg" alt="F01 主控台指标面板" width="88%" />
-</p>
+启动后可以直接浏览 3D 厂区，右上角进入监控室后查看订单、设备、仓储、异常和工程复盘。
 
 ## 快速开始
 
@@ -81,7 +77,7 @@ node --test test/*.test.js
 | --- | --- |
 | `src/` | 3D 场景、布局、设备、物流、仿真和主控台代码 |
 | `src/assets/` | 网页运行需要的模型和图片资源 |
-| `docs/` | README 展示用的流程图和主控台示意图 |
+| `docs/` | README 展示用的真实启动页面截图 |
 | `test/` | 布局、仿真、设备和工程分析测试 |
 | `index.html` | 应用入口 |
 | `package.json` | 启动、构建和依赖配置 |
